@@ -1,0 +1,4 @@
+{
+    "default_data_path" : "/home/bogdan/ecom/datasets.gitlab/datasets/export",
+    "device": "cuda:0"
+}

@@ -1,0 +1,58 @@
+baseline_gpytorch.py
+yacht: test_mse=7.68; alpha=0.09; lr=0.01, n_iter=10; lengthscale: 1.187
+boston: test_mse = 19.52; alpha=0.2; lr=0.1; n_iter=10
+concrete: test_mse=32.06; alpha=0.1;  lr=0.1; n_iter=10
+###########################################################################################
+local_sklearnKRR.py
+epanechnikov_windowing_func:
+    yacht: test_mse=0.96, 'alpha': 0.0001, 'kernel': RBF(length_scale=0.706), 'h': 0.48, MinMaxScaler 
+
+
+###########################################################################################
+baseline_KRR.py
+yacht test_mse=1.14, alpha=0.001, gamma=0.1, standardise=True
+boston  test MSE 17.12, alpha=0.005, gamma=0.01, standardise=True
+concrete test MSE 30.78, alpha=0.012742749857031334, gamma=0.1,standardise=True
+energy test MSE 1.17, alpha=0.001, gamma=0.1, standardise=True
+---------------------------------------------------------------------------
+yacht test_mse=1.09, alpha=0.001, gamma=1.0, MinMaxScaler
+boston  test MSE 17.94, alpha=0.001, gamma=0.1, MinMaxScaler
+concrete test MSE 37.81, alpha=0.001, gamma=1.0, MinMaxScaler
+energy test MSE 1.39, alpha=0.001, gamma=1.0, MinMaxScaler
+
+#########################################################################################
+baseline_RFF.py
+kin8nm test MSE 0.006, gamma=0.05, alpha=0.00046, standardise=True
+powerplant test MSE 14.73, gamma=0.05, alpha=1e-06,standardise=True
+protein test MSE 17.03, gamma=1.66, alpha=0.215, standardise=True
+-----------------------------------------------------------------------------------------
+kin8nm test MSE 0.006, gamma=1.6681, alpha=0.0278, MinMaxScaler
+powerplant test MSE 16.85, gamma=1.6681, alpha=7.74e-06, MinMaxScaler
+protein test MSE 42.94, gamma=46.41, alpha=0.215, MinMaxScaler
+
+#########################################################################################
+nn_sklearnKRR.py
+yacht test_mse=0.63, 'alpha': 0.0001, 'kernel': RBF(length_scale=0.659), 'n_points': 9, MinMaxScaler, hilbert_kern (HP were chosen by epanechnikov)
+boston test_mse=14.78239769, 'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 9, MinMaxScaler, hilbert_kern (HP were chosen by epanechnikov)
+concrete test_mse=34.79, 'alpha': 0.0112, 'kernel': RBF(length_scale=0.456), 'n_points': 100, MinMaxScaler, hilbert_kern (HP were chosen by epanechnikov)
+kin8nm test_mse=0.011, 'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 9, 'val mse': array([[0.01300294]])}, MinMaxScaler, hilbert_kern (HP were chosen by epanechnikov)
+powerplant test_mse=14.656464 'alpha': 0.0001, 'kernel': RBF(length_scale=2.89), 'n_points': 60, 'val mse': array([[4.98004932]])} ???? ,????,(HP were chosen by epanechnikov)
+protein test_mse=36.85pm2.15 'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 60, MinMaxScaler, epanechnhilbert_kernikov_windowing_func (HP were chosen by epanechnikov)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+yacht test_mse=2.02pm0.58, 'alpha': 0.0001, 'kernel': RBF(length_scale=0.659), 'n_points': 9, MinMaxScaler, epanechnikov_windowing_func (HP were chosen by epanechnikov)
+boston test_mse=15.30pm1.28  'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 9, MinMaxScaler, epanechnikov_windowing_func (HP were chosen by epanechnikov)
+concrete test_mse=40.43pm3.16, 'alpha': 0.0112, 'kernel': RBF(length_scale=0.456), 'n_points': 100, epanechnikov_windowing_func (HP were chosen by epanechnikov)
+kin8nm test_mse=0.011, 'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 9, 'val mse': array([[0.01300294]])}, MinMaxScaler, epanechnikov_windowing_func (HP were chosen by epanechnikov) 
+powerplant test_mse=14.40pm0.67 'alpha': 0.0001, 'kernel': RBF(length_scale=2.89), 'n_points': 60, 'val mse': array([[4.98004932]])} MinMaxScaler, epanechnikov_windowing_func,(HP were chosen by epanechnikov)
+!!(best) protein test_mse=12.50 'alpha': 0.0001, 'kernel': RBF(length_scale=10), 'n_points': 60, standardise=True, epanechnikov_windowing_func (HP were chosen by epanechnikov)
+
+##########################################################################################
+gp_gpytorch_old.py
+
+With rectangular kernel + scaler kernel + constant mean
+yacht test_mse=6.08; logh=0; alpha=0.001; lr=0.01
+
+
+boston
+#########################################################################################
